@@ -10,8 +10,8 @@ import { AgendarCitaPage } from './agendar-cita.page';
     CommonModule,
     FormsModule,
     AgendarCitaPageRoutingModule,
-    AgendarCitaPage // 👈 Mover aquí a imports
+    AgendarCitaPage // 
   ],
-  declarations: [] // 👈 Dejar vacío
+  declarations: [] // 
 })
 export class AgendarCitaPageModule {}

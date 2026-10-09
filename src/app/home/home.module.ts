@@ -9,8 +9,8 @@ import { HomePageRoutingModule } from './home-routing.module';
     CommonModule,
     FormsModule,
     HomePageRoutingModule,
-    HomePage // <-- Mueve HomePage aquí
+    HomePage // 
   ],
-  declarations: [] // <-- Quítalo de declarations
+  declarations: [] // 
 })
 export class HomePageModule {}

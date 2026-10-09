@@ -10,8 +10,8 @@ import { CategoriasPage } from './categorias.page';
     CommonModule,
     FormsModule,
     CategoriasPageRoutingModule,
-    CategoriasPage // 👈 Mover aquí a imports
+    CategoriasPage // 
   ],
-  declarations: [] // 👈 Dejar vacío
+  declarations: [] // 
 })
 export class CategoriasPageModule {}

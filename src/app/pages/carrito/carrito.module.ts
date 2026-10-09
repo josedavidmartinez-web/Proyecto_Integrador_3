@@ -10,8 +10,8 @@ import { CarritoPage } from './carrito.page';
     CommonModule,
     FormsModule,
     CarritoPageRoutingModule,
-    CarritoPage // 👈 Se mueve a 'imports' porque CarritoPage es Standalone
+    CarritoPage // 
   ],
-  declarations: [] // 👈 Se deja vacío
+  declarations: [] // 
 })
 export class CarritoPageModule {}
