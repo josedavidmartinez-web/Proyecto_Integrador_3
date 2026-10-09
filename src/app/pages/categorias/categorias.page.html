@@ -1,13 +1,99 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>categorias</ion-title>
+<ion-header class="ion-no-border">
+  <ion-toolbar class="header-toolbar">
+    <div class="header-content">
+      <small class="subtitle-clinic">Clínica</small>
+      <h1 class="title-clinic">Auracaria</h1>
+    </div>
   </ion-toolbar>
+
+  <!-- BUSCADOR MÉDICO -->
+  <div class="search-wrapper">
+    <div class="search-box">
+      <ion-icon name="search-outline"></ion-icon>
+      <input type="text" placeholder="Buscar especialidad o servicio..." />
+    </div>
+  </div>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">categorias</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="content-auracaria ion-padding">
+  <div class="section-header">
+    <h2>Explora nuestros Servicios</h2>
+    <p>Selecciona una especialidad para agendar tu consulta médica</p>
+  </div>
+
+  <!-- GRILLA DE ESPECIALIDADES / SERVICIOS -->
+  <div class="services-grid">
+    <!-- Traumatología -->
+    <div class="service-card" (click)="irA('/agendar')">
+      <div class="card-icon bg-blue">
+        <ion-icon name="fitness-outline"></ion-icon>
+      </div>
+      <div class="card-details">
+        <h3>Traumatología</h3>
+        <p>Lesiones óseas, musculares y rehabilitación</p>
+      </div>
+      <ion-icon name="chevron-forward-outline" class="arrow-icon"></ion-icon>
+    </div>
+
+    <!-- Ginecología -->
+    <div class="service-card" (click)="irA('/agendar')">
+      <div class="card-icon bg-rose">
+        <ion-icon name="woman-outline"></ion-icon>
+      </div>
+      <div class="card-details">
+        <h3>Ginecología</h3>
+        <p>Salud integral de la mujer y control prenatal</p>
+      </div>
+      <ion-icon name="chevron-forward-outline" class="arrow-icon"></ion-icon>
+    </div>
+
+    <!-- Urología -->
+    <div class="service-card" (click)="irA('/agendar')">
+      <div class="card-icon bg-teal">
+        <ion-icon name="body-outline"></ion-icon>
+      </div>
+      <div class="card-details">
+        <h3>Urología</h3>
+        <p>Diagnóstico y tratamiento del sistema urinario</p>
+      </div>
+      <ion-icon name="chevron-forward-outline" class="arrow-icon"></ion-icon>
+    </div>
+
+    <!-- Consulta Médica -->
+    <div class="service-card" (click)="irA('/agendar')">
+      <div class="card-icon bg-emerald">
+        <ion-icon name="medkit-outline"></ion-icon>
+      </div>
+      <div class="card-details">
+        <h3>Consulta Médica</h3>
+        <p>Atención general, chequeos y diagnóstico</p>
+      </div>
+      <ion-icon name="chevron-forward-outline" class="arrow-icon"></ion-icon>
+    </div>
+  </div>
 </ion-content>
+
+<!-- NAVEGACIÓN INFERIOR (TABS) -->
+<ion-footer class="custom-footer">
+  <div class="tabs-bar">
+    <button type="button" class="tab-btn" (click)="irA('/home')">
+      <ion-icon name="home-outline"></ion-icon>
+    </button>
+
+    <button type="button" class="tab-btn" (click)="irA('/agendar')">
+      <ion-icon name="calendar-outline"></ion-icon>
+    </button>
+
+    <button type="button" class="tab-btn active" (click)="irA('/categorias')">
+      <ion-icon name="grid-outline"></ion-icon>
+    </button>
+
+    <button type="button" class="tab-btn" (click)="irA('/carrito')">
+      <ion-icon name="cart-outline"></ion-icon>
+    </button>
+
+    <button type="button" class="tab-btn" (click)="irA('/perfil')">
+      <ion-icon name="person-outline"></ion-icon>
+    </button>
+  </div>
+</ion-footer>

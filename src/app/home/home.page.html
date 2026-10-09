@@ -1,177 +1,82 @@
-<ion-header class="ion-no-border"> 
-
-  <ion-toolbar class="ion-text-center" background="#475569"> 
-
-    <ion-buttons slot="end"> 
-
-      <!-- REDIRECCIÓN: Cerrar sesión --> 
-
-      <ion-button (click)="cerrarSesion()"> 
-
-        <ion-icon name="log-out-outline" slot="icon-only" style="color:#ffffff"></ion-icon> 
-
-      </ion-button> 
-
-    </ion-buttons> 
-
-    <ion-title class="titulo-clinica"> 
-
-      Clinica<br><strong>Auracaria</strong> 
-
-    </ion-title> 
-
-  </ion-toolbar> 
-
-</ion-header> 
-
- 
-
-<ion-content class="ion-padding"> 
-
-  <!-- BARRA DE BÚSQUEDA --> 
-
-  <ion-searchbar  
-
-    placeholder="Buscar Estudios o Paquetes"  
-
-    class="custom-searchbar"> 
-
-  </ion-searchbar> 
-
- 
-
-  <!-- TARJETAS DE ESTUDIOS / PAQUETES --> 
-
-  <div class="cards-container"> 
-
-    @for (estudio of listaEstudios; track estudio.id) { 
-
-      <ion-card class="estudio-card"> 
-
-        <ion-card-header> 
-
-          <div class="card-title-row"> 
-
-            <ion-icon name="pulse-outline" class="estudio-icon"></ion-icon> 
-
-            <ion-card-title>{{ estudio.titulo }}</ion-card-title> 
-
-          </div> 
-
-        </ion-card-header> 
-
- 
-
-        <ion-card-content> 
-
-          <p class="descripcion">{{ estudio.descripcion }}</p> 
-
- 
-
-          <div class="info-row"> 
-
-            <div class="detalles-left"> 
-
-              <p><ion-icon name="star-outline"></ion-icon> {{ estudio.beneficio }}</p> 
-
-              <p><ion-icon name="calendar-outline"></ion-icon> Requiere cita previa</p> 
-
-            </div> 
-
-            <div class="precio-right ion-text-end"> 
-
-              <span class="monto">${{ estudio.precio }}</span> 
-
-              <span class="iva">iva incluido</span> 
-
-            </div> 
-
-          </div> 
-
- 
-
-          <div class="buttons-row"> 
-
-            <!-- REDIRECCIÓN: Ver Detalle dinámico --> 
-
-            <button type="button" class="btn-detalle" (click)="verDetalleEstudio(estudio)"> 
-
-              Ver detalle 
-
-            </button> 
-
-            <!-- REDIRECCIÓN: Agregar al carrito / ir al Carrito --> 
-
-            <button type="button" class="btn-carrito" (click)="irA('/carrito')"> 
-
-              Agregar al carrito 
-
-            </button> 
-
-          </div> 
-
-        </ion-card-content> 
-
-      </ion-card> 
-
-    } 
-
-  </div> 
-
-</ion-content> 
-
- 
-
-<!-- BARRA DE NAVEGACIÓN INFERIOR (TABS) --> 
-
-<ion-footer> 
-
-  <ion-toolbar class="footer-toolbar"> 
-
-    <div class="tabs-bar"> 
-
-      <!-- REDIRECCIÓN: Inicio --> 
-
-      <ion-button fill="clear" class="tab-btn active" (click)="irA('/home')"> 
-
-        <ion-icon name="home-sharp"></ion-icon> 
-
-      </ion-button> 
-
-      <!-- REDIRECCIÓN: Agendar Cita --> 
-
-      <ion-button fill="clear" class="tab-btn" (click)="irA('/agendar-cita')"> 
-
-        <ion-icon name="calendar-number-outline"></ion-icon> 
-
-      </ion-button> 
-
-      <!-- REDIRECCIÓN: Categorías --> 
-
-      <ion-button fill="clear" class="tab-btn" (click)="irA('/categorias')"> 
-
-        <ion-icon name="grid-outline"></ion-icon> 
-
-      </ion-button> 
-
-      <!-- REDIRECCIÓN: Carrito --> 
-
-      <ion-button fill="clear" class="tab-btn" (click)="irA('/carrito')"> 
-
-        <ion-icon name="cart-outline"></ion-icon> 
-
-      </ion-button> 
-
-      <!-- REDIRECCIÓN: Perfil --> 
-
-      <ion-button fill="clear" class="tab-btn avatar-btn" (click)="irA('/perfil')"> 
-
-        <ion-icon name="person-circle-outline"></ion-icon> 
-
-      </ion-button> 
-
-    </div> 
-
-  </ion-toolbar> 
-
-</ion-footer> 
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-text-center" background="#475569">
+    <ion-buttons slot="end">
+      <!-- REDIRECCIÓN: Cerrar sesión -->
+      <ion-button (click)="cerrarSesion()">
+        <ion-icon name="log-out-outline" slot="icon-only" style="color:#ffffff"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="titulo-clinica">
+      Clinica<br><strong>Auracaria</strong>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- BARRA DE BÚSQUEDA -->
+  <ion-searchbar placeholder="Buscar Estudios o Paquetes" class="custom-searchbar"></ion-searchbar>
+
+  <!-- TARJETAS DE ESTUDIOS / PAQUETES -->
+  <div class="cards-container">
+    @for (estudio of listaEstudios; track estudio.id) {
+      <ion-card class="estudio-card">
+        <ion-card-header>
+          <div class="card-title-row">
+            <ion-icon name="pulse-outline" class="estudio-icon"></ion-icon>
+            <ion-card-title>{{ estudio.titulo }}</ion-card-title>
+          </div>
+        </ion-card-header>
+
+        <ion-card-content>
+          <p class="descripcion">{{ estudio.descripcion }}</p>
+
+          <div class="info-row">
+            <div class="detalles-left">
+              <p><ion-icon name="star-outline"></ion-icon> {{ estudio.beneficio }}</p>
+              <p><ion-icon name="calendar-outline"></ion-icon> Requiere cita previa</p>
+            </div>
+            <div class="precio-right ion-text-end">
+              <span class="monto">${{ estudio.precio }}</span>
+              <span class="iva">iva incluido</span>
+            </div>
+          </div>
+
+          <div class="buttons-row">
+            <!-- REDIRECCIÓN: Ver Detalle dinámico -->
+            <button type="button" class="btn-detalle" (click)="verDetalleEstudio(estudio)">Ver detalle</button>
+            <!-- REDIRECCIÓN: Agregar al carrito / ir al Carrito -->
+            <button type="button" class="btn-carrito" (click)="irA('/carrito')">Agregar al carrito</button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    }
+  </div>
+</ion-content>
+
+<!-- BARRA DE NAVEGACIÓN INFERIOR (TABS) -->
+<ion-footer>
+  <ion-toolbar class="footer-toolbar">
+    <div class="tabs-bar">
+      <!-- REDIRECCIÓN: Inicio -->
+      <ion-button fill="clear" class="tab-btn active" (click)="irA('/home')">
+        <ion-icon name="home-sharp"></ion-icon>
+      </ion-button>
+      <!-- REDIRECCIÓN: Agendar Cita -->
+      <ion-button fill="clear" class="tab-btn" (click)="irA('/agendar-cita')">
+        <ion-icon name="calendar-number-outline"></ion-icon>
+      </ion-button>
+      <!-- REDIRECCIÓN: Categorías -->
+      <ion-button fill="clear" class="tab-btn" (click)="irA('/categorias')">
+        <ion-icon name="grid-outline"></ion-icon>
+      </ion-button>
+      <!-- REDIRECCIÓN: Carrito -->
+      <ion-button fill="clear" class="tab-btn" (click)="irA('/carrito')">
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-button>
+      <!-- REDIRECCIÓN: Perfil -->
+      <ion-button fill="clear" class="tab-btn avatar-btn" (click)="irA('/perfil')">
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>

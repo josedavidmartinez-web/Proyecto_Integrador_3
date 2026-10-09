@@ -1,0 +1,76 @@
+ion-content { 
+  --background: #ffffff !important; 
+} 
+
+.back-header { 
+  display: flex; 
+  align-items: center; 
+  gap: 8px; 
+  font-size: 1.1rem; 
+  font-weight: 700; 
+  color: #0f172a; 
+  margin-bottom: 20px; 
+  cursor: pointer; 
+
+  ion-icon { 
+    font-size: 1.3rem; 
+    color: #0284c7; 
+  } 
+} 
+
+.form-agendar { 
+  .input-group { 
+    margin-bottom: 12px; 
+
+    label { 
+      display: block; 
+      font-size: 0.8rem; 
+      font-weight: 600; 
+      color: #334155; 
+      margin-bottom: 4px; 
+    } 
+
+    .custom-input { 
+      width: 100%; 
+      background: #f1f5f9; 
+      border: 1px solid #cbd5e1; 
+      border-radius: 6px; 
+      padding: 8px 12px; 
+      font-size: 0.85rem; 
+      color: #0f172a; 
+      outline: none; 
+
+      &:focus { 
+        border-color: #0284c7; 
+        background: #ffffff; 
+      } 
+    } 
+  } 
+
+  .actions-row { 
+    display: flex; 
+    gap: 10px; 
+    margin-top: 20px; 
+
+    button { 
+      flex: 1; 
+      padding: 10px; 
+      border-radius: 6px; 
+      font-size: 0.85rem; 
+      font-weight: 600; 
+      cursor: pointer; 
+    } 
+
+    .btn-confirmar { 
+      background: #0284c7; 
+      color: #ffffff; 
+      border: none; 
+    } 
+
+    .btn-cancelar { 
+      background: #f1f5f9; 
+      color: #64748b; 
+      border: 1px solid #cbd5e1; 
+    } 
+  } 
+}
