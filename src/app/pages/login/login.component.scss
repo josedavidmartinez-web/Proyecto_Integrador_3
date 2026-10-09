@@ -1,0 +1,144 @@
+/* CONFIGURACIÓN DEL FONDO BLANCO Y LIMPIO DE CLÍNICA */
+ion-content {
+  --background: #ffffff !important;
+  --color: #1e293b !important;
+}
+
+/* ENCABEZADOS Y TÍTULOS */
+.header-container {
+  margin-top: 30px;
+  margin-bottom: 20px;
+
+  .titulo-clinica {
+    font-size: 2rem;
+    color: #0284c7; /* Azul oscuro elegante */
+    line-height: 1.2;
+    margin-bottom: 24px;
+    font-weight: 300;
+
+    strong {
+      font-weight: 700;
+      color: #0284c7; /* Azul médico brillante */
+    }
+  }
+
+  .bienvenida-title {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 6px 0;
+  }
+
+  .bienvenida-subtitle {
+    font-size: 0.95rem;
+    color: #64748b; /* Gris azulado suave */
+    margin: 0;
+  }
+}
+
+/* CONTENEDOR DEL FORMULARIO */
+.form-container {
+  max-width: 320px;
+  margin: 0 auto;
+  text-align: left;
+
+  .input-group {
+    margin-bottom: 18px;
+
+    .input-label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #334155;
+      margin-bottom: 6px;
+    }
+
+    /* CAJA DE INPUT ESTILO CLÍNICO */
+    .custom-input-box {
+      display: flex;
+      align-items: center;
+      background-color: #f1f5f9; /* Azul/gris claro suave */
+      border: 1px solid #cbd5e1; /* Borde sutil */
+      border-radius: 8px;
+      padding: 0 14px;
+      height: 46px;
+      transition: all 0.2s ease;
+
+      &:focus-within {
+        border-color: #0284c7; /* Resaltado azul al hacer clic */
+        background-color: #ffffff;
+        box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+      }
+
+      .native-input {
+        width: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 0.95rem;
+        color: #0f172a;
+
+        &::placeholder {
+          color: #94a3b8;
+        }
+      }
+
+      .input-icon {
+        font-size: 1.25rem;
+        color: #64748b;
+        margin-right: 10px;
+
+        &.action-icon {
+          margin-right: 0;
+          margin-left: 10px;
+          cursor: pointer;
+          &:hover {
+            color: #0284c7;
+          }
+        }
+      }
+    }
+  }
+
+  /* BOTÓN PRINCIPAL AZUL MÉDICO */
+  .btn-iniciar {
+    display: block;
+    width: 100%;
+    margin: 28px auto 16px auto;
+    background-color: #0284c7; /* Azul clínico principal */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(2, 132, 199, 0.25);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+
+    &:hover {
+      background-color: #0369a1;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  /* ENLACE "CREAR UNA CUENTA" */
+  .link-registro {
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #0284c7;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #0369a1;
+      text-decoration: underline;
+    }
+  }
+}
