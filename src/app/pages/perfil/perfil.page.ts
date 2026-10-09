@@ -27,6 +27,7 @@ export class PerfilPage implements OnInit {
     addIcons({ homeOutline, calendarOutline, gridOutline, cartOutline, personOutline, logOutOutline });
   }
 
+  // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method
   ngOnInit() {}
 
   irA(ruta: string) {

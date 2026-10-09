@@ -1,24 +1,16 @@
-/* eslint-disable @angular-eslint/prefer-inject */
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import {
   IonHeader, IonToolbar, IonTitle, IonContent, IonCard,
-  IonCardHeader, IonIcon, IonCardContent, IonButton, IonLabel,
-  IonBadge, IonCardTitle, IonFooter, IonSearchbar, IonButtons
+  IonCardHeader, IonIcon, IonCardContent, IonButton,
+  IonCardTitle, IonFooter, IonSearchbar, IonButtons, IonGrid, IonRow, IonCol
 } from '@ionic/angular';
 import { addIcons } from 'ionicons';
-import { Service } from '../services/auth';
 import {
-  pulseOutline,
-  starOutline,
-  calendarOutline,
-  homeSharp,
-  calendarNumberOutline,
-  gridOutline,
-  cartOutline,
-  personCircleOutline,
-  logOutOutline
+  pulseOutline, starOutline, calendarOutline, homeSharp,
+  calendarNumberOutline, gridOutline, cartOutline,
+  personCircleOutline, logOutOutline
 } from 'ionicons/icons';
 
 @Component({
@@ -30,8 +22,8 @@ import {
     CommonModule,
     IonHeader, IonToolbar, IonTitle, IonContent,
     IonCard, IonCardHeader, IonIcon, IonCardContent,
-    IonButton, IonLabel, IonBadge, IonCardTitle,
-    IonFooter, IonSearchbar, IonButtons
+    IonButton, IonCardTitle, IonFooter, IonSearchbar, IonButtons,
+    IonGrid, IonRow, IonCol
   ],
 })
 export class HomePage {
@@ -47,21 +39,21 @@ export class HomePage {
     },
     {
       id: 2,
-      titulo: 'Electrocardiograma',
+      titulo: 'Electrocardiograma Paquete',
       descripcion: 'Incluye varios estudios preventivos.',
       beneficio: 'Beneficio Corazón Sano',
       precio: 520
     },
     {
       id: 3,
-      titulo: 'Ultrasonido renal y de vías urinarias para mujeres.',
-      descripcion: 'Conocido también: electrocardiograma en reposo, ECG, EXG.',
+      titulo: 'Ultrasonido Renal',
+      descripcion: 'Ultrasonido renal y de vías urinarias para mujeres.',
       beneficio: 'Beneficio Corazón Sano',
       precio: 275
     }
   ];
 
-  constructor(public auth: Service) {
+  constructor() {
     addIcons({
       pulseOutline,
       starOutline,
@@ -75,12 +67,10 @@ export class HomePage {
     });
   }
 
-  // NAVEGACIÓN A LAS PÁGINAS GENERALES
   irA(ruta: string) {
     this.router.navigate([ruta]);
   }
 
-  // NAVEGACIÓN DINÁMICA A ESPECIALIDAD-DETALLE
   verDetalleEstudio(estudio: any) {
     let clave = 'electrocardiograma';
     if (estudio.id === 2) {

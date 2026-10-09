@@ -1,9 +1,8 @@
-/* eslint-disable @angular-eslint/no-empty-lifecycle-method */
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { IonContent, IonFooter, IonToolbar, IonButton, IonIcon, ToastController } from '@ionic/angular';
+import { IonContent, IonFooter, IonIcon, ToastController } from '@ionic/angular';
 import { addIcons } from 'ionicons';
 import { homeOutline, calendarOutline, gridOutline, cartOutline, personOutline } from 'ionicons/icons';
 
@@ -12,9 +11,15 @@ import { homeOutline, calendarOutline, gridOutline, cartOutline, personOutline }
   templateUrl: './agendar-cita.page.html',
   styleUrls: ['./agendar-cita.page.scss'],
   standalone: true,
-  imports: [CommonModule, FormsModule, IonContent, IonFooter, IonToolbar, IonButton, IonIcon]
+  imports: [
+    CommonModule, 
+    FormsModule, 
+    IonContent, 
+    IonFooter, 
+    IonIcon
+  ]
 })
-export class AgendarCitaPage implements OnInit {
+export class AgendarCitaPage {
   private router = inject(Router);
   private toastController = inject(ToastController);
 
@@ -30,8 +35,6 @@ export class AgendarCitaPage implements OnInit {
   constructor() {
     addIcons({ homeOutline, calendarOutline, gridOutline, cartOutline, personOutline });
   }
-
-  ngOnInit() {}
 
   async confirmarCita() {
     const toast = await this.toastController.create({
