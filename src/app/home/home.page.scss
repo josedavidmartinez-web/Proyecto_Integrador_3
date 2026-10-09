@@ -1,299 +1,179 @@
 /* CONFIGURACIÓN DEL FONDO GENERAL */ 
-
 ion-content { 
-
-background: #ffffff !important; 
-
-color: #475569 !important; 
-
+  --background: #ffffff !important; 
+  --color: #475569 !important; 
 } 
-
- 
 
 /* TÍTULO PRINCIPAL DE LA CLÍNICA */ 
-
 .titulo-clinica { 
+  font-size: 1.6rem; 
+  color: #0284c7; 
+  line-height: 1.2; 
+  font-weight: 300; 
+  text-align: center; 
+  margin: 16px 0; 
 
-font-size: 1.6rem; 
-
-color: #0284c7; 
-
-line-height: 1.2; 
-
-font-weight: 300; 
-
-text-align: center; 
-
-margin: 16px 0; 
-
- 
-
-strong { 
-
-font-weight: 700; 
-
-color: #0284c7; /* Azul clínico */ 
-
+  strong { 
+    font-weight: 700; 
+    color: #0284c7; /* Azul clínico */ 
+  } 
 } 
-
-} 
-
- 
 
 /* BARRAS DE BÚSQUEDA */ 
-
 .custom-searchbar { 
-
-background: #f1f5f9; 
-
-column-rule-color: #64748b; 
-
-flood-color: #0284c7; 
-
-color: #475569; 
-
-border-radius: 8px; 
-
-padding: 0; 
-
-margin-bottom: 16px; 
-
-border-bottom: 1px solid #cbd5e1; 
-
+  --background: #f1f5f9; 
+  --placeholder-color: #64748b; 
+  --icon-color: #0284c7; 
+  --color: #475569; 
+  --border-radius: 8px; 
+  padding: 0; 
+  margin-bottom: 16px; 
+  border-bottom: 1px solid #cbd5e1; 
 } 
-
- 
 
 /* TARJETAS DE ESTUDIOS/PAQUETES */ 
-
 .estudio-card { 
+  border: 1px solid #e2e8f0; 
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); 
+  border-radius: 10px; 
+  margin: 0 0 16px 0; 
+  background: #ffffff; 
+  transition: transform 0.2s ease, box-shadow 0.2s ease; 
 
-border: 1px solid #e2e8f0; 
+  &:hover { 
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08); 
+  } 
 
-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); 
+  ion-card-header { 
+    padding: 14px 14px 4px 14px; 
 
-border-radius: 10px; 
+    .card-title-row { 
+      display: flex; 
+      align-items: center; 
+      gap: 8px; 
 
-margin: 0 0 16px 0; 
+      .estudio-icon { 
+        font-size: 22px; 
+        color: #0284c7; /* Ícono en azul clínico */ 
+      } 
 
-background: #ffffff; 
+      ion-card-title { 
+        font-size: 1.05rem; 
+        font-weight: 600; 
+        color: #0f172a; 
+      } 
+    } 
+  } 
 
-transition: transform 0.2s ease, box-shadow 0.2s ease; 
+  ion-card-content { 
+    padding: 0 14px 14px 14px; 
 
- 
+    .descripcion { 
+      font-size: 0.82rem; 
+      color: #475569; 
+      margin-bottom: 10px; 
+      line-height: 1.4; 
+    } 
 
-  &:hover { 
+    .info-row { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: flex-end; 
+      margin-bottom: 14px; 
 
-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08); 
+      .detalles-left { 
+        p { 
+          font-size: 0.78rem; 
+          color: #64748b; 
+          margin: 3px 0; 
+          display: flex; 
+          align-items: center; 
+          gap: 6px; 
 
+          ion-icon { 
+            color: #0284c7; 
+          } 
+        } 
+      } 
+
+      .precio-right { 
+        text-align: right; 
+
+        .monto { 
+          display: block; 
+          font-size: 1.2rem; 
+          font-weight: 700; 
+          color: #0284c7; /* Destacado en azul */ 
+        } 
+
+        .iva { 
+          display: block; 
+          font-size: 0.7rem; 
+          color: #94a3b8; 
+        } 
+      } 
+    } 
+
+    /* BOTONES DENTRO DE LAS TARJETAS */ 
+    .buttons-row { 
+      display: flex; 
+      justify-content: flex-end; 
+      gap: 10px; 
+
+      /* Botón "Ver detalle" (Secundario) */ 
+      .btn-detalle { 
+        --background: #f1f5f9; 
+        --color: #0284c7; 
+        --border-radius: 6px; 
+        border: 1px solid #cbd5e1; 
+        text-transform: none; 
+        font-size: 0.8rem; 
+        font-weight: 600; 
+        height: 32px; 
+        border-radius: 4px; 
+      } 
+
+      /* Botón "Agregar al carrito" (Principal) */ 
+      .btn-carrito { 
+        --background: #0284c7; 
+        --color: #ffffff; 
+        --border-radius: 6px; 
+        text-transform: none; 
+        font-size: 0.8rem; 
+        font-weight: 600; 
+        height: 32px; 
+        box-shadow: 0 2px 4px rgba(2, 132, 199, 0.2); 
+        border-radius: 4px; 
+      } 
+    } 
+  } 
 } 
 
- 
-ion-card-header { 
-
-padding: 14px 14px 4px 14px; 
-
- 
-
-.card-title-row { 
-
-display: flex; 
-
-align-items: center; 
-
-gap: 8px; 
-
- 
-
-.estudio-icon { 
-
-font-size: 22px; 
-
-color: #0284c7; /* Ícono en azul clínico */ 
-
+/* BARRA DE NAVEGACIÓN INFERIOR (TABS FOOTER) */ 
+.footer-toolbar { 
+  --border-width: 0; 
+  --background: #ffffff; 
+  border-top: 1px solid #e2e8f0; 
 } 
 
- 
-
-ion-card-title { 
-
-font-size: 1.05rem; 
-
-font-weight: 600; 
-
-color: #0f172a; 
-
-} 
-
-} 
-
-} 
-
- 
-
-ion-card-content { 
-
-padding: 0 14px 14px 14px; 
-
- 
-
-.descripcion { 
-
-font-size: 0.82rem; 
-
-color: #475569; 
-
-margin-bottom: 10px; 
-
-line-height: 1.4; 
-
-} 
-
- 
-
-.info-row { 
-
-display: flex; 
-
-justify-content: space-between; 
-
-align-items: flex-end; 
-
-margin-bottom: 14px; 
-
- 
-
-.detalles-left { 
-
-p { 
-
-font-size: 0.78rem; 
-
-color: #64748b; 
-
-margin: 3px 0; 
-
-display: flex; 
-
-align-items: center; 
-
-gap: 6px; 
-
- 
-
- 
-
-ion-icon { 
-
-color: #0284c7; 
-
-} 
-
-} 
-
-} 
-
- 
-
-.precio-right { 
-
-text-align: right; 
-
- 
-
-.monto { 
-
-display: block; 
-
-font-size: 1.2rem; 
-
-font-weight: 700; 
-
-color: #0284c7; /* Destacado en azul */ 
-
-} 
-
- 
-
-.iva { 
-
-display: block; 
-
-font-size: 0.7rem; 
-
-color: #94a3b8; 
-
-} 
-
-} 
-
-} 
-
- 
-
-/* BOTONES DENTRO DE LAS TARJETAS */
-
-.buttons-row {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-
-  /* Botón "Ver detalle" (Secundario) */
-  .btn-detalle {
-    --background: #f1f5f9;
-    --color: #0284c7;
-    --border-radius: 6px;
-    border: 1px solid #cbd5e1;
-    text-transform: none;
-    font-size: 0.8rem;
-    font-weight: 600;
-    height: 32px;
-    border-radius: 4px;
-  }
-
-  /* Botón "Agregar al carrito" (Principal) */
-  .btn-carrito {
-    --background: #0284c7;
-    --color: #ffffff;
-    --border-radius: 6px;
-    text-transform: none;
-    font-size: 0.8rem;
-    font-weight: 600;
-    height: 32px;
-    box-shadow: 0 2px 4px rgba(2, 132, 199, 0.2);
-    border-radius: 4px;
-  }
-}
-
-}
-
-/* BARRA DE NAVEGACIÓN INFERIOR (TABS FOOTER) */
-
-.footer-toolbar {
-  --border-width: 0;
-  --background: #ffffff;
-  border-top: 1px solid #e2e8f0;
-}
-
-.tabs-bar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 6px 0;
-
-  .tab-btn {
-    --color: #94a3b8;
-    font-size: 24px;
-    margin: 0;
-    transition: color 0.2s ease;
-
-    &.active {
-      --color: #0284c7; /* Pestaña activa en azul clínico */
-    }
-
-    &:hover {
-      --color: #0369a1;
-    }
-  }
-}
+.tabs-bar { 
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center; 
+  padding: 6px 0; 
+
+  .tab-btn { 
+    --color: #94a3b8; 
+    font-size: 24px; 
+    margin: 0; 
+    transition: color 0.2s ease; 
+
+    &.active { 
+      --color: #0284c7; /* Pestaña activa en azul clínico */ 
+    } 
+
+    &:hover { 
+      --color: #0369a1; 
+    } 
+  } 
 }
