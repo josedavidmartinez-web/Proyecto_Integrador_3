@@ -1,1 +1,1 @@
-Agregué mis pages en mi rama Ricardo
+Agregué mis paginas en mi rama Ricardo
