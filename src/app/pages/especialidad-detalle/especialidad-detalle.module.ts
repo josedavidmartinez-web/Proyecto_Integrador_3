@@ -10,8 +10,8 @@ import { EspecialidadDetallePage } from './especialidad-detalle.page';
     CommonModule,
     FormsModule,
     EspecialidadDetallePageRoutingModule,
-    EspecialidadDetallePage // 👈 Mover a imports
+    EspecialidadDetallePage 
   ],
-  declarations: [] // 👈 Dejar vacío
+  declarations: [] // 
 })
 export class EspecialidadDetallePageModule {}

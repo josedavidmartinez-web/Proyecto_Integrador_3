@@ -10,8 +10,8 @@ import { LoginPage } from './login.page';
     CommonModule,
     FormsModule,
     LoginPageRoutingModule,
-    LoginPage // 👈 Mover a imports
+    LoginPage // 
   ],
-  declarations: [] // 👈 Dejar vacío
+  declarations: [] // 
 })
 export class LoginPageModule {}

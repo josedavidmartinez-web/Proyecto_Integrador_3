@@ -10,8 +10,8 @@ import { PerfilPage } from './perfil.page';
     CommonModule,
     FormsModule,
     PerfilPageRoutingModule,
-    PerfilPage // 👈 Mover a imports
+    PerfilPage // 
   ],
-  declarations: [] // 👈 Dejar vacío
+  declarations: [] //
 })
 export class PerfilPageModule {}
