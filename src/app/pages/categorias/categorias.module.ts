@@ -2,19 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { IonicModule } from '@ionic/angular/lazy';
-
 import { CategoriasPageRoutingModule } from './categorias-routing.module';
-
 import { CategoriasPage } from './categorias.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,
-    CategoriasPageRoutingModule
+    CategoriasPageRoutingModule,
+    CategoriasPage // 👈 Mover aquí a imports
   ],
-  declarations: [CategoriasPage]
+  declarations: [] // 👈 Dejar vacío
 })
 export class CategoriasPageModule {}

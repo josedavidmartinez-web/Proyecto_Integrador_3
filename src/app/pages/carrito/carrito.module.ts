@@ -2,19 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { IonicModule } from '@ionic/angular/lazy';
-
 import { CarritoPageRoutingModule } from './carrito-routing.module';
-
 import { CarritoPage } from './carrito.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,
-    CarritoPageRoutingModule
+    CarritoPageRoutingModule,
+    CarritoPage // 👈 Se mueve a 'imports' porque CarritoPage es Standalone
   ],
-  declarations: [CarritoPage]
+  declarations: [] // 👈 Se deja vacío
 })
 export class CarritoPageModule {}
