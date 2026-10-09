@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HomePage } from './home.page';
-import { HomePageRoutingModule } from './home-routing.module';
+
+import { CarritoPageRoutingModule } from './carrito-routing.module';
+import { CarritoPage } from './carrito.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    HomePageRoutingModule,
-    HomePage // 
+    CarritoPageRoutingModule,
+    CarritoPage // 
   ],
   declarations: [] // 
 })
-export class HomePageModule {}
+export class CarritoPageModule {}

@@ -1,0 +1,21 @@
+<ion-footer>
+  <ion-toolbar class="footer-toolbar">
+    <div class="tabs-bar">
+      <ion-button fill="clear" class="tab-btn" [class.active]="pantallaActual === 'home'" (click)="irA('/home')">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" class="tab-btn" [class.active]="pantallaActual === 'agendar'" (click)="irA('/agendar-cita')">
+        <ion-icon name="calendar-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" class="tab-btn" [class.active]="pantallaActual === 'categorias'" (click)="irA('/categorias')">
+        <ion-icon name="grid-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" class="tab-btn" [class.active]="pantallaActual === 'carrito'" (click)="irA('/carrito')">
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" class="tab-btn" [class.active]="pantallaActual === 'perfil'" (click)="irA('/perfil')">
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>

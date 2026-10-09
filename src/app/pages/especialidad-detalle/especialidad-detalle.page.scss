@@ -1,0 +1,111 @@
+ion-content {
+  --background: #f1f5f9;
+}
+
+.back-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  cursor: pointer;
+
+  ion-icon {
+    font-size: 24px;
+    color: #0f172a;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+  }
+}
+
+.detalle-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  .intro-texto {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.5;
+  }
+
+  .seccion-info {
+    margin-top: 16px;
+
+    h3 {
+      font-size: 1rem;
+      color: #0f172a;
+      font-weight: 600;
+    }
+
+    ul {
+      padding-left: 20px;
+      color: #334155;
+      li {
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .precio-box {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #e2e8f0;
+
+    span {
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+
+    .monto {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0284c7;
+      margin: 4px 0 0;
+
+      small {
+        font-size: 0.75rem;
+        color: #94a3b8;
+      }
+    }
+  }
+
+  .btn-agendar {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #0284c7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+}
+
+.footer-toolbar {
+  --background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+
+  .tabs-bar {
+    display: flex;
+    justify-content: space-around;
+    padding: 6px 0;
+
+    .tab-btn {
+      --color: #64748b;
+      ion-icon {
+        font-size: 24px;
+      }
+      &.active {
+        --color: #0284c7;
+      }
+    }
+  }
+}

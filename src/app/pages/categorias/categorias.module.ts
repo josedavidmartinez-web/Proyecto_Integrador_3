@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HomePage } from './home.page';
-import { HomePageRoutingModule } from './home-routing.module';
+
+import { CategoriasPageRoutingModule } from './categorias-routing.module';
+import { CategoriasPage } from './categorias.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    HomePageRoutingModule,
-    HomePage // 
+    CategoriasPageRoutingModule,
+    CategoriasPage // 
   ],
   declarations: [] // 
 })
-export class HomePageModule {}
+export class CategoriasPageModule {}

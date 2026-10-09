@@ -1,0 +1,96 @@
+<ion-content class="ion-padding ion-text-center">
+  <!-- ENCABEZADO PRINCIPAL -->
+  <div class="header-container">
+    <h1 class="titulo-clinica">
+      Clinica<br><strong>Auracaria</strong>
+    </h1>
+  </div>
+
+  <!-- VISTA DE LOGIN -->
+  @if (modo === 'login') {
+    <div class="header-container">
+      <h2 class="bienvenida-title">¡Bienvenido de nuevo!</h2>
+      <p class="bienvenida-subtitle">Accede a tu cuenta auracaria</p>
+    </div>
+
+    <div class="form-container">
+      <!-- CAMPO: NOMBRE USUARIO -->
+      <div class="input-group">
+        <label class="input-label">Nombre usuario</label>
+        <div class="custom-input-box">
+          <ion-icon name="person" class="input-icon"></ion-icon>
+          <input
+            type="text"
+            [(ngModel)]="loginUser"
+            name="loginUser"
+            class="native-input" placeholder="Ejm:juanperez" style="text-align: left;"/>
+        </div>
+      </div>
+
+      <!-- CAMPO: CONTRASEÑA -->
+      <div class="input-group">
+        <label class="input-label">Contraseña</label>
+        <div class="custom-input-box">
+          <input
+            [type]="loginPassVisible ? 'text' : 'password'"
+            [(ngModel)]="loginPass"
+            name="loginPass"
+            class="native-input" placeholder="*******"/>
+          <ion-icon
+            [name]="loginPassVisible ? 'eye-off-outline' : 'eye-outline'"
+            class="input-icon action-icon"
+            (click)="TogglePassword()">
+          </ion-icon>
+        </div>
+      </div>
+
+      <!-- BOTÓN INICIAR SESIÓN -->
+      <button type="button" class="btn-iniciar" (click)="ingresar()">
+        Iniciar Sesion
+      </button>
+
+      <!-- ENLACE A REGISTRO -->
+      <p class="link-registro" (click)="modo = 'registro'">
+        Crear una cuenta
+      </p>
+    </div>
+  }
+
+  <!-- VISTA DE REGISTRO -->
+  @if (modo === 'registro') {
+    <div class="header-container">
+      <h2 class="bienvenida-title">Crear cuenta auracaria</h2>
+    </div>
+
+    <div class="form-container">
+      <div class="input-group">
+        <label class="input-label">Nombre usuario</label>
+        <div class="custom-input-box">
+          <input type="text" [(ngModel)]="regNombre" name="regNombre" class="native-input" placeholder="Ejm: juanperez" style="text-align: left;"/>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label class="input-label">Correo electrónico</label>
+        <div class="custom-input-box">
+          <input type="email" [(ngModel)]="regCorreo" name="regCorreo" class="native-input" placeholder="Ejm: juanperez@gmail.com" style="text-align: left;"/>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label class="input-label">Contraseña</label>
+        <div class="custom-input-box">
+          <input type="password" [(ngModel)]="regPass" name="regPass" class="native-input" placeholder="*******" style="text-align: left;"/>
+        </div>
+      </div>
+
+      <button type="button" class="btn-iniciar" (click)="registrar()">
+        Registrarse
+      </button>
+
+      <p class="link-registro" (click)="modo = 'login'">
+        ¿Ya tienes cuenta? Iniciar Sesion
+      </p>
+    </div>
+  }
+</ion-content>
